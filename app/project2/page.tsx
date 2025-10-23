@@ -53,7 +53,7 @@ function EiffelTower({ opacity = 1, ...props }) {
 
 // Abstract Versailles Gates
 function VersaillesGates({ opacity = 1, ...props }) {
-  const group = useRef();
+  const group = useRef<THREE.Group>(null);
   
   // Create array of fence posts
   const posts = Array.from({ length: 11 }, (_, i) => i - 5);
@@ -140,15 +140,16 @@ function MontSaintMichel({ opacity = 1, ...props }) {
 }
 
 // --- Scene Orchestrator ---
-function Scene({ scrollTriggerRef }) {
+function Scene({ scrollTriggerRef }: { scrollTriggerRef: React.RefObject<HTMLDivElement | null> }) {
   const { camera, scene } = useThree();
-  const eiffelRef = useRef();
-  const versaillesRef = useRef();
-  const msmRef = useRef();
-  const lightRef = useRef();
+  const eiffelRef = useRef<THREE.Group>(null);
+  const versaillesRef = useRef<THREE.Group>(null);
+  const msmRef = useRef<THREE.Group>(null);
+  const lightRef = useRef<THREE.DirectionalLight>(null);
 
   useLayoutEffect(() => {
     if (!scrollTriggerRef.current) return;
+    if (!eiffelRef.current || !versaillesRef.current || !msmRef.current) return;
 
     // Initial Camera Setup
     camera.position.set(0, -8, 10);
@@ -241,7 +242,7 @@ function Scene({ scrollTriggerRef }) {
 
 // --- Main Component ---
 export default function FranceJourney() {
-  const mainContainerRef = useRef(null);
+  const mainContainerRef = useRef<HTMLDivElement>(null);
 
   // GSAP UI Animations
   useLayoutEffect(() => {

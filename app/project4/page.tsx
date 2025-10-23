@@ -463,7 +463,7 @@ function Divider({ theme }: { theme: Theme }) {
   return <div className={cn("h-px w-full", theme === "dark" ? "bg-gray-700" : "bg-gray-200")} />;
 }
 
-export default function IndexPage(): JSX.Element {
+export default function IndexPage() {
   const [theme, setTheme] = useTheme();
   const [activeTab, setActiveTab] = useState<TabKey>("Overview");
   const [search, setSearch] = useState("");
@@ -560,7 +560,7 @@ export default function IndexPage(): JSX.Element {
     label: string;
     value: string;
     href?: string;
-    Icon: (props: React.SVGProps<SVGSVGElement>) => JSX.Element;
+    Icon: (props: React.SVGProps<SVGSVGElement>) => React.ReactElement;
   }) => (
     <div className="flex items-center gap-2">
       <Icon className={cn("w-4 h-4", themeSubtle)} />

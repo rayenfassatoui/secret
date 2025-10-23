@@ -3,7 +3,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
-import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
+import { motion, AnimatePresence, useScroll, useTransform, type Variants } from 'framer-motion';
 import { 
   Github, 
   Linkedin, 
@@ -73,12 +73,12 @@ const SKILLS = [
 ];
 
 // --- Animations ---
-const fadeInUp = {
+const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } }
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
 };
 
-const staggerContainer = {
+const staggerContainer: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
