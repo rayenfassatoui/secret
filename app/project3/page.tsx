@@ -1,26 +1,20 @@
 "use client";
 
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Head from 'next/head';
-import { motion, AnimatePresence, useScroll, useTransform, type Variants } from 'framer-motion';
-import { 
-  Github, 
-  Linkedin, 
-  Twitter, 
-  Mail, 
-  ExternalLink, 
-  Code2, 
-  Palette, 
-  Terminal, 
-  Cpu, 
-  Globe, 
+import { motion, type Variants } from 'framer-motion';
+import {
+  Github,
+  Linkedin,
+  Twitter,
+  Mail,
+  ExternalLink, Palette,
+  Terminal, Globe,
   ArrowUpRight,
   MapPin,
   Briefcase,
-  Coffee,
-  Moon,
-  Sun
+  Coffee
 } from 'lucide-react';
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
