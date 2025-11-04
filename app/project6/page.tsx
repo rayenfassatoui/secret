@@ -1,5 +1,4 @@
-"use client";
-
+"use client";;
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { 
@@ -27,7 +26,6 @@ import {
 } from "lucide-react";
 import AnimatedGradientText from "@/components/ui/animated-gradient-text";
 import ShimmerButton from "@/components/ui/shimmer-button";
-import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";
 import DotPattern from "@/components/ui/dot-pattern";
 import { cn } from "@/lib/utils";
 

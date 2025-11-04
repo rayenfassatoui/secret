@@ -2,7 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
-import React, { forwardRef, useRef } from "react";
+import React, { useRef } from "react";
 
 export interface AnimatedBeamProps {
   className?: string;
