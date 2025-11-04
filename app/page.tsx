@@ -130,7 +130,7 @@ const Page = () => {
               e.currentTarget.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
             }}>
               <h2 style={{ fontSize: '1.25rem', fontWeight: '600', color: '#1f2937', margin: 0 }}>
-                Project 4
+                Project 4 (GPT5)
               </h2>
             </div>
           </Link>
