@@ -1,23 +1,23 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import { 
-  Database, 
-  BarChart3, 
-  Building2, 
-  Shield, 
-  GitBranch, 
-  Workflow, 
-  Globe, 
-  Users,
-  CheckCircle2,
-  ArrowRight,
-  Zap,
-  Lock,
-  TrendingUp,
-  Layers
+import {
+    Database,
+    BarChart3,
+    Building2,
+    Shield,
+    GitBranch,
+    Workflow,
+    Globe,
+    Users,
+    CheckCircle2,
+    ArrowRight,
+    Zap,
+    Lock,
+    TrendingUp,
+    Layers
 } from "lucide-react";
 
 export default function MindPlatformLanding() {
